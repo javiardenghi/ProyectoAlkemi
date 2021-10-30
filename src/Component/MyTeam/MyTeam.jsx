@@ -5,28 +5,30 @@ import Button from "react-bootstrap/Button"
 function MyTeam({props}) {
     const {delete_Pj} = useAddContext()
 
-   
     function clear (){
         delete_Pj(props)
     }
-
     return (
 <>
-    <Card>
-    <Card.Img variant="top" src="holder.js/100px160" />
+    <Card align="center" >
+    <div >
+    <Card.Img variant="top" src={props.image.url} style={{ width: '15rem'}} align="center"/>
+    </div>
     <Card.Body>
       <Card.Title>{props.name}</Card.Title>
       <Card.Text>
-        {props.powerstats.speed}<br/>
-        {props.powerstats.intelligence}<br/>
-        {props.powerstats.strength}<br/>
-        {props.powerstats.durability}<br/>
-        {props.powerstats.power}<br/>
-        {props.powerstats.combat}<br/>
+        Speed: {props.powerstats.speed}<br/>
+        Intelligence: {props.powerstats.intelligence}<br/>
+        Strength: {props.powerstats.strength}<br/>
+        Durability: {props.powerstats.durability}<br/>
+        Power: {props.powerstats.power}<br/>
+        Combat: {props.powerstats.combat}<br/>
       </Card.Text>
     </Card.Body>
     <Card.Footer>
-      <small className="text-muted">Last updated 3 mins ago</small>
+      <div style={{textAlign:"center"}}>
+        <small className="text-muted">{props.biography.alignment}</small>
+      </div>
     </Card.Footer>
     <Button onClick={clear}>
         Elminar

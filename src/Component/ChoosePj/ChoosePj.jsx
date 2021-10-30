@@ -8,19 +8,15 @@ import Button from "react-bootstrap/Button";
 function ChoosePj() {
     const [state, setState] = useState([])
 
-
-
     function call(values){
        axios({
            method:"GET",
            url: `/api/4413114758743949/search/${values.Name}`,
            
-       }).then(res=>setState(res.data.results))
-
-       
+       }).then(res=>setState(res.data.results)) 
     }
     return (
-        <div>
+        <div style={{textAlign: "center"}}>
         <h1>Buscar Super Heroe</h1>
         <Formik
           initialValues={{
@@ -28,20 +24,17 @@ function ChoosePj() {
           }}
           onSubmit={async (values) => {
             await new Promise((r) => setTimeout(r, 500));
-            
             call(values);
           }}
         >
-          <Form>
-            <label htmlFor="firstName">Nombre</label>
-            <Field id="firstName" name="Name" placeholder="Por ej: Batman" />
-            <button type="submit">Submit</button>
+          <Form style={{paddingBottom: 25}}>
+            <Field id="firstName" name="Name" placeholder="Por ej: Batman , Venom" />
+            <button type="submit">Search</button>
           </Form>
-        </Formik>
-
-       <Item result={state}/>
-       <Link to="/my-team">  
-          <Button>
+          </Formik>
+          <Item result={state}/>
+          <Link to="/my-team">  
+          <Button style={{width:"100%"}}>
              My Team
           </Button>
         </Link> 

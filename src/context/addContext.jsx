@@ -19,13 +19,17 @@ function AddContextProvider({children}) {
 
     function addHeroe(e){
         setId([...id,e.id])
-        if(id.includes(e.id)){
-           alert(`${e.name} is already in your team`)
+        if(heroe.length == 6){
+            alert("Equipo completo")
         }else{
-            setHeroe([...heroe,e])
-            updateStats(e)     
+            if(id.includes(e.id)){
+                alert(`${e.name} is already in your team`)
+             }else{
+                 setHeroe([...heroe,e])
+                 updateStats(e)     
+             }
         }
-    }
+   }
 
     function delete_Pj(elemento){
         const newHeroe = heroe.filter(e=> e.id != elemento.id)
@@ -78,12 +82,9 @@ function AddContextProvider({children}) {
         }else{
             setCombat(Number(el.powerstats.combat) + combat)
         }
-
-        
         setAltura([...altura,Number(el.appearance.height[1].replace("cm",""))])
         setPeso([...peso,Number(el.appearance.weight[1].replace("kg",""))])
     }
-
     return(
         <AddContext.Provider value={{addHeroe, heroe, delete_Pj,updateStats,speed,intelligence,strength,durability,power,combat,altura,peso}}>
             {children}

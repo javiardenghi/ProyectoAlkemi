@@ -9,20 +9,20 @@ import Stats from '../Stats/Stats'
 
 function MyTeamContainer() {
     const {heroe} = useAddContext()
-    //heroe me devuelve array de objetos con todos los datos de los heroes
 
-  
     return (
         <>
         <div>
           {
+            heroe.length === 0 ? <h1 style={{textAlign: 'center'}}> Empty Team </h1> : 
             <CardGroup>
               {heroe.map(e=>
                 <MyTeam props={e}/>
               )}
+            <Stats stats={heroe}/>
+
             </CardGroup>}  
         </div>
-        <Stats stats={heroe}/>
         <Link to="/">
             <Button >
                 Home
