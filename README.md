@@ -1,70 +1,70 @@
-# Getting Started with Create React App
+# Proyecto Alkemy
+- ## Proyecto Alkemy - Buscador de SuperHeroes con React JS
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![N|Solid](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/320px-React-icon.svg.png)](https://es.reactjs.org/)
 
-## Available Scripts
 
-In the project directory, you can run:
+Este Challenge es un proyecto que corre con ReactJs para desplegar una aplicacion para buscar tu super heroe preferido en la cual el usuario puede realizar las acciones necesarias para conformar un equipo de 6 personajes y visualizar sus estadisticas
+Este proyecto esta armado de tal forma que en un futuro pueda ser escalable y se le pueda seguir agregando componentes y funciones tanto de react como de firebase para una mejor experiencia del usuario.
+> Mediante los componentes de React-Boostrap en su version 5.1 se le
+dio el estilo al proyecto ademas de tener un archivo de CSS propio 
+para detallar algunos elementos en particular de la pagina que no vienen
+incluidos en React-Bootstrap
+## Features
 
-### `npm start`
+- Buscar un super heroe especifico mediante un buscador
+- Poder ver detalle de cada super heroe en particular
+- Filtrar resultados de api mediante el nombre ingresado al buscador
+- Ver en todo momento la cantidad de objetos agregados al equipo
+- una vez conformado el equipo calcular estadisticas totales
+- Ademas de las estadisticas totales realizar un promedio del peso y altura
+- Poder borrar un elemento o todos del equipo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Tecnologias
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Para el proyecto se utilizaron las siguientes Herramientas:
 
-### `npm run build`
+- React - Framework de JavaScript para construir Interfaces de Usuario
+- React-Bootstrap - Libreria de Estilos compatible con React
+- Node - Entorno de ejecucion para Javascript.
+- Npm - Administrador de paquetes para Node
+- Api - superheroapi
+- Formik 
+- react-circular-progressbar
+- Github - Para guardar el Proyecto
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Repositorio Publico con el codigo del proyecto: https://github.com/javiardenghi/ProyectoAlkemi
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Instalacion
 
-### `npm run eject`
+El proyecto requiere  [Node.js](https://nodejs.org/) y [Git](https://git-scm.com/)
+Una vez instaladas e inicializadas estas Herramientas, Clonar el repositorio del Proyecto.
+Dentro de cmd colocar:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+cd (carpeta donde guardar proyecto)
+git clon https://github.com/javiardenghi/ProyectoAlkemi
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+# Development
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## React JS
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Se utilizo la version: 16.5.0
+Hooks Utilizados:
+- useState
+- useEffect
+- React Router
+- useContext
+## Firebase:
+- Se utilizo la Herramienta Firestore como base de datos para cargar
+los productos vistos en la pagina y recibir las ordenes de compra de los usuarios
+## React-Bootstrap
+- Version: 5.1
+- Se utilizo para incorporar los estilos a los componentes correspondientes
+- Tambien se modificaron ciertos elementos con CSS
+## Node 
+- Version: 14.18.0
